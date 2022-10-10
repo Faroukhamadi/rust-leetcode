@@ -1,17 +1,17 @@
 use std::{cell::RefCell, rc::Rc};
 
 #[derive(Debug, PartialEq, Eq)]
-pub struct TreeNode {
-    pub val: i32,
-    pub left: Option<Rc<RefCell<TreeNode>>>,
-    pub right: Option<Rc<RefCell<TreeNode>>>,
+pub struct TreeNode<T> {
+    pub val: T,
+    pub left: Option<Rc<RefCell<TreeNode<T>>>>,
+    pub right: Option<Rc<RefCell<TreeNode<T>>>>,
 }
 
-type Node = Option<Rc<RefCell<TreeNode>>>;
+type Node<T> = Option<Rc<RefCell<TreeNode<T>>>>;
 
-impl TreeNode {
+impl<T> TreeNode<T> {
     #[inline]
-    pub fn new(val: i32) -> Self {
+    pub fn new(val: T) -> Self {
         Self {
             val,
             left: None,
@@ -20,7 +20,7 @@ impl TreeNode {
     }
 }
 
-pub fn invert_tree(root: Node) -> Node {
+pub fn invert_tree<T>(root: Node<T>) -> Node<T> {
     if let Some(node) = root.clone() {
         let mut node = node.borrow_mut();
         let (l, r) = (
