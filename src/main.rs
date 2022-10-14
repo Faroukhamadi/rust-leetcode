@@ -1,3 +1,3 @@
-mod number_of_islands_solution;
+mod contains_duplicate_solution;
 
 fn main() {}
