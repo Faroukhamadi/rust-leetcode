@@ -5,8 +5,8 @@ pub fn contains_duplicate(nums: Vec<i32>) -> bool {
 
     for n in nums {
         match occurs.insert(n, n) {
-            Some(x) => return true,
-            None => {}
+            Some(_) => return true,
+            None => (),
         }
     }
     false
