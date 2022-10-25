@@ -1,3 +1,3 @@
-mod same_tree_solution;
+mod valid_anagram_solution;
 
 fn main() {}
