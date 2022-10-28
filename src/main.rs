@@ -1,3 +1,5 @@
-mod valid_anagram_solution;
+mod binary_search_solution;
 
-fn main() {}
+fn main() {
+    binary_search_solution::search(vec![5], 4);
+}
