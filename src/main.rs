@@ -1,3 +1,3 @@
-mod search_2d_matrix_solution;
+mod is_subtree_solution;
 
 fn main() {}
