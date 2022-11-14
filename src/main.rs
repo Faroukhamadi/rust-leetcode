@@ -1,4 +1,5 @@
-mod course_schedule_solution;
+mod construct_string_from_binary_tree;
+
 fn main() {
     let my_str = String::from("Hello world");
 
