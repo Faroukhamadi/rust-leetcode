@@ -1,4 +1,5 @@
-mod construct_string_from_binary_tree;
+mod a132_pattern_solution;
+mod balanced_binary_tree_solution;
 
 fn main() {
     let my_str = String::from("Hello world");
